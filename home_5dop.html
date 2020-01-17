@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">                 
+    </HEAD>
+    <BODY>
+        <h1 align="center">Заполните анкету</h1>  
+        <form name="1" method="GET" action="http://fe.it-academy.by/TestForm.php"> 
+            <fieldset>
+                <legend>Личные данные</legend><br>
+                <input autofocus type="text" id="text1" name="text1" placeholder="Фамилия" required pattern="^[А-Яа-я]{,25}"><br>
+                <input type="text" id="text2" name="text2" placeholder="Имя" required pattern="^[А-Яа-я]{,20}"><br>
+                <input type="text" id="text3" name="text3" placeholder="Отчество" required pattern="^[А-Яа-я]{,24}"><br>                    
+                    <fieldset>
+                        <legend>Паспортные данные</legend><br>                        
+                        <input type="text" id="text4" name="text4" maxlength="2" required pattern="^[А-Я]{2}">
+                        <input type="text" id="text5" name="text5" maxlength="7" required pattern="^[0-9]{7}">
+                    </fieldset> 
+                    <fieldset>
+                        <legend>Дата рождения</legend><br>                        
+                        <input type="text" name="text6" placeholder="2000" maxlength="4" pattern="^[0-9]{,4}"><br>
+                        <input type="month" name="month"><br>
+                        <input type="number" name="number1" min="1" max="31" step="1"><br> 
+                    </fieldset>
+                    <select name="list" id="list" placeholder="РБ" required>
+                        <option value="1">РБ</option>
+                    </select>
+                    <p>Адрес:</p><br>
+                    <input type="text" id="text7" name="text7">
+            </fieldset>  
+            <fieldset>
+                <legend>Интересы</legend><br>                        
+                    <fieldset>
+                        <legend>array: Хобби</legend><br>                        
+                        <label>
+                            <input type="checkbox" name="val_1" id="chbox1" checked>Рыбалка<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="val_2" id="chbox2" checked>Астрономия<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="val_3" id="chbox3" checked>Дайвинг<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="val_4" id="chbox4" checked>Марки<br>
+                        </label>
+                    </fieldset> 
+                    <fieldset>
+                        <legend>Домашние животные(возможность выбора нескольких вариантов)</legend><br>                        
+                        <select name="list" id="list" multiple>
+                            <optgroup label="Попугаи">
+                                <option value="1">Волнистый</option>
+                                <option value="2">Ара</option>
+                                <option value="3">Неразлучник</option>
+                            </optgroup>
+                            <optgroup label="Рыба">
+                                <option value="4">Караси</option>
+                                <option value="5">Окуни</option>
+                                <option value="6">Осетр</option>
+                            </optgroup>
+                            <optgroup label="Птицы">
+                                <option value="7">Стая ворон</option>
+                                <option value="8">Аист</option>
+                                <option value="9">Археоптерикс</option>
+                            </optgroup>
+                        </select>
+                    </fieldset> 
+            </fieldset>
+            <fieldset>
+                <legend>Данные для входа и восстановления пароля</legend><br>                        
+                <input type="text" id="text8" name="text8" placeholder="Логин" min="5" required pattern="^[А-Яа-я]{,20}"><br>
+                <input type="password" id="password" name="password" placeholder="Пароль" min="10" required pattern="^[А-Яа-я]{,20}" autocomplete="off">
+            </fieldset>
+            <fieldset>
+                <legend>Координаты</legend><br>                        
+                <input type="email" id="email" name="email" placeholder="введите адрес почты"><br>
+                <input type="url" id="url" name="url" placeholder="введите адрес сайта">
+            </fieldset>
+            <fieldset>
+                <legend>Цифры</legend><br>                        
+                <input type="number" id="number2" name="number2" min="-2.5" max="2.5" step="0.1">
+                <input type="range" min="1" max="10">
+            </fieldset>
+            <fieldset>
+                <legend>Кнопки управления</legend><br>                        
+                <input type="submit" value="Отправить">
+                <input type="reset" value="Сбросить"><br>
+                <button type="button">
+                    <img src="email.png" width="30" height="30"><br>
+                </button>
+            </fieldset>
+        </form>           
+    </BODY>
+</HTML>
