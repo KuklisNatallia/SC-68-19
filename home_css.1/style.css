@@ -1,0 +1,14 @@
+@import "style1.css" screen; 
+@import "style2.css" print;
+
+BODY media screen{    
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color:#eee;
+}
+BODY media print{
+    font-family: serif;
+    font-size: 55px;
+    color: #fff;
+    background-color: #000;
+}
